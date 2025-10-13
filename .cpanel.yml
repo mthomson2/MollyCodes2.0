@@ -2,4 +2,15 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/mollmimm/public_html/
-    - /bin/cp -R /home/mollmimm/repositories/MollyCodes2.0 $DEPLOYPATH
+    - export SOURCEPATH=/home/mollmimm/repositories/MollyCodes2.0
+    - /bin/cp -R $SOURCEPATH/node_modules $DEPLOYPATH
+    - /bin/cp -R $SOURCEPATH/public $DEPLOYPATH
+    - /bin/cp -R $SOURCEPATH/src $DEPLOYPATH
+    - /bin/cp $SOURCEPATH/eslint.config.js $DEPLOYPATH
+    - /bin/cp $SOURCEPATH/index.html $DEPLOYPATH
+    - /bin/cp $SOURCEPATH/package-lock.json $DEPLOYPATH
+    - /bin/cp $SOURCEPATH/package.json $DEPLOYPATH
+    - /bin/cp $SOURCEPATH/tsconfig.app.json $DEPLOYPATH
+    - /bin/cp $SOURCEPATH/tsconfig.json $DEPLOYPATH
+    - /bin/cp $SOURCEPATH/tsconfig.node.json $DEPLOYPATH
+    - /bin/cp $SOURCEPATH/vite.config.ts $DEPLOYPATH
