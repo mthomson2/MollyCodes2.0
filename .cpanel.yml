@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/mollmimm/public_html/
+    - /bin/cp -R /home/mollmimm/repositories/MollyCodes2.0 $DEPLOYPATH
